@@ -2,8 +2,8 @@
 This is a simple project to validate consumption and production of Kafka messages with Micronaut.
 
 ## TODO
-- [ ] Docker compose with `Kafka` and `Apicurio`
-- [ ] Consume and publish simple message with Json serialization
+- [x] Docker compose with `Kafka` and `Apicurio`
+- [x] Consume and publish simple message with Avro serialization
 - [ ] Consume and publish Protobuf message
 - [ ] Consume and publish with Protobuf using `apicurio` schema validation
 
