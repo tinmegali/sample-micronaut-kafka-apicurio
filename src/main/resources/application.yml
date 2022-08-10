@@ -31,9 +31,15 @@ kafka:
     avro:
       key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value.deserializer: io.apicurio.registry.serde.avro.AvroKafkaDeserializer
+    proto:
+      key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value.deserializer: io.apicurio.registry.serde.protobuf.ProtobufKafkaDeserializer
   producers:
     avro:
       key.serializer: org.apache.kafka.common.serialization.StringSerializer
       value.serializer: io.apicurio.registry.serde.avro.AvroKafkaSerializer
+    proto:
+      key.serializer: org.apache.kafka.common.serialization.StringSerializer
+      value.serializer: io.apicurio.registry.serde.protobuf.ProtobufKafkaSerializer
 
 
