@@ -6,6 +6,7 @@ plugins {
     id("io.micronaut.application") version "3.5.1"
     id("com.google.cloud.tools.jib") version "2.8.0"
     id("io.micronaut.test-resources") version "3.5.1"
+    id("com.github.davidmc24.gradle.plugin.avro") version "1.3.0"
 }
 
 version = "0.1"
@@ -28,6 +29,9 @@ dependencies {
     runtimeOnly("ch.qos.logback:logback-classic")
     implementation("io.micronaut:micronaut-validation")
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+    // Avro
+    implementation("org.apache.avro:avro:1.11.0")
 
     // test
     testImplementation("org.jetbrains.kotlin:kotlin-test")
