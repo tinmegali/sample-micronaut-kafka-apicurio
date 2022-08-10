@@ -28,11 +28,11 @@ kafka:
       use-specific-avro-reader: true
       url: http://localhost:8090/apis/registry/v2
   consumers:
-    default:
+    avro:
       key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value.deserializer: io.apicurio.registry.serde.avro.AvroKafkaDeserializer
   producers:
-    default:
+    avro:
       key.serializer: org.apache.kafka.common.serialization.StringSerializer
       value.serializer: io.apicurio.registry.serde.avro.AvroKafkaSerializer
 
