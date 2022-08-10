@@ -11,3 +11,29 @@ kafka:
     enabled: true
   bootstrap:
     servers: localhost:9092
+  specific:
+    avro:
+      reader: true
+  schema:
+    registry:
+      url: http://localhost:8090/apis/registry/v2
+
+  apicurio:
+    registry:
+      artifact-resolver-strategy: io.apicurio.registry.serde.strategy.TopicIdStrategy
+      headers:
+        enabled: true
+      find-latest: true
+      auto-register: true
+      use-specific-avro-reader: true
+      url: http://localhost:8090/apis/registry/v2
+  consumers:
+    default:
+      key.deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value.deserializer: io.apicurio.registry.serde.avro.AvroKafkaDeserializer
+  producers:
+    default:
+      key.serializer: org.apache.kafka.common.serialization.StringSerializer
+      value.serializer: io.apicurio.registry.serde.avro.AvroKafkaSerializer
+
+
