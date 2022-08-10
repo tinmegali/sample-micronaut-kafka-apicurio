@@ -33,6 +33,11 @@ dependencies {
     // Avro
     implementation("org.apache.avro:avro:1.11.0")
 
+    // Apicurio
+    implementation("io.apicurio:apicurio-registry-client:2.2.5.Final")
+    implementation("io.apicurio:apicurio-registry-utils-kafka:2.2.5.Final")
+    implementation("io.apicurio:apicurio-registry-serdes-avro-serde:2.2.5.Final")
+
     // test
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.4")
