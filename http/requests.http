@@ -1,0 +1,9 @@
+###
+POST http://localhost:8080/api/sample/simple_event
+Content-Type: application/json
+
+{
+  "name": "sample-event",
+  "description": "sample v01",
+  "createdOn": 1603214435
+}
